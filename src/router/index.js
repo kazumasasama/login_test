@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
+import VideoWatch from '@/views/VideoWatch.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/video/:id',
+    name: 'video-watch',
+    component: VideoWatch,
+    params: true,
   },
   {
     path: '/about',
