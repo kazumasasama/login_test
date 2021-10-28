@@ -18,15 +18,15 @@
 </template>
 
 <script>
-
 export default {
   name: 'Home',
   components: {},
-  data() {
-    return {
-      videos: this.$store.state.videos
-    }
-  }
+  mounted() {
+    this.$store.dispatch("loadVideos");
+  },
+  computed: {
+    videos() { return this.$store.state.videos }
+  },
 }
 </script>
 
